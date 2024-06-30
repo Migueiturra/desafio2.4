@@ -1,0 +1,255 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+.areagrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "navbar"
+    "filter"
+    "main"
+    "pagination"
+    "footer";
+  height: 100vh;
+}
+
+.barranav {
+  background-color: #011140;
+  grid-area: navbar;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #05c7f2;
+  padding: 15px;
+}
+
+.logoynombre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  animation: colores 2s infinite ease-in-out alternate;
+}
+
+@keyframes colores {
+  0% {
+    color: aliceblue;
+  }
+
+  100% {
+    color: #05c7f2;
+  }
+}
+
+.barranav ul {
+  display: none;
+}
+
+.filter {
+  background-color: #0487d9;
+  color: whitesmoke;
+  grid-area: filter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  gap: 10px;
+  color: #011140;
+}
+
+.main img {
+  width: 100%;
+  background-color: white;
+}
+
+.footer {
+  background-color: #40012f;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  gap: 5px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: pagination;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consola1,
+.consola2,
+.consola3,
+.consola4,
+.consola5,
+.consola6,
+.consola7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  padding: 10px;
+  border-color: rgba(128, 128, 128, 0.37);
+  transition: all 0.5s ease-in-out;
+}
+
+.consola1:hover,
+.consola2:hover,
+.consola3:hover,
+.consola4:hover,
+.consola5:hover,
+.consola6:hover,
+.consola7:hover {
+  scale: 1.05;
+}
+
+.boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  color: aliceblue;
+  background-color: #5f49f2;
+  border-radius: 5px;
+  width: 90px;
+}
+
+@media (min-width: 576px) {
+  .barranav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .barranav .fa-bars {
+    display: none;
+  }
+
+  .areagrid {
+    grid-template-rows: 125px auto 125px;
+    grid-template-columns: 200px auto;
+    grid-template-areas:
+      "navbar filter"
+      "navbar main"
+      "footer pagination";
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "consola1 consola2 consola3 consola4"
+      "consola5 consola6 consola7 .";
+  }
+  .consola1 {
+    grid-area: consola1;
+  }
+
+  .consola2 {
+    grid-area: consola2;
+  }
+
+  .consola3 {
+    grid-area: consola3;
+  }
+  .consola4 {
+    grid-area: consola4;
+  }
+  .consola5 {
+    grid-area: consola5;
+  }
+  .consola6 {
+    grid-area: consola6;
+  }
+  .consola7 {
+    grid-area: consola7;
+  }
+
+  .logoynombre {
+    font-size: 16px;
+  }
+
+  .logoynombre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .logoynombre i {
+    font-size: 20px;
+  }
+
+  .logoynombre h3 {
+    font-size: 20px;
+  }
+
+  .barranav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+  }
+
+  .barranav ul li {
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .barranav ul li:hover {
+    color: aliceblue;
+    font-weight: 500;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+  }
+}
