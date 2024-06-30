@@ -30,6 +30,10 @@
   padding: 15px;
 }
 
+.promocion {
+  display: none;
+}
+
 .logoynombre {
   display: flex;
   flex-direction: row;
@@ -165,10 +169,11 @@ nav {
   }
 
   .areagrid {
-    grid-template-rows: 125px auto 125px;
+    grid-template-rows: 125px 60px auto 125px;
     grid-template-columns: 200px auto;
     grid-template-areas:
       "navbar filter"
+      "navbar promocion"
       "navbar main"
       "footer pagination";
   }
@@ -251,5 +256,22 @@ nav {
     padding: 20px;
     align-content: center;
     text-align: center;
+  }
+  .promocion {
+    grid-area: promocion;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: promo infinite 20s linear;
+  }
+  @keyframes promo {
+    0% {
+      transform: translateX(-1600px);
+    }
+
+    100% {
+      transform: translateX(1600px);
+    }
   }
 }
