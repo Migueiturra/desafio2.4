@@ -102,6 +102,14 @@
   gap: 5px;
 }
 
+.fa-facebook {
+  color: whitesmoke;
+}
+
+.fa-instagram {
+  color: whitesmoke;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -257,6 +265,15 @@ nav {
     align-content: center;
     text-align: center;
   }
+
+  .animapromo {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+
+  
+  }
   .promocion {
     grid-area: promocion;
     display: flex;
@@ -265,13 +282,19 @@ nav {
     justify-content: center;
     animation: promo infinite 20s linear;
   }
+
+  .promocion img {
+    width: 30px;
+    height: 30px;
+  }
+
   @keyframes promo {
     0% {
-      transform: translateX(-1600px);
+      transform: translateX(-100%);
     }
 
     100% {
-      transform: translateX(1600px);
+      transform: translateX(100%);
     }
   }
 }
